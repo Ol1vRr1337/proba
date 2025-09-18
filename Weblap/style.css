@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid: 
+    "header" 50px
+    "nav" 30px
+    "main" auto
+    "footer" 30px
+    /1fr
+    ;
+}
+
+header{
+    background-color: blue;
+    grid-area: header;
+}
+
+nav{
+    background-color: chocolate;
+    grid-area: nav;
+}
+
+main{
+    background-color: chartreuse;
+    grid-area: main;
+    display: grid;
+}
+
+aside{
+    background-color: yellow;
+    grid-area: aside;
+}
+
+footer{
+    background-color: darkorchid;
+    grid-area: footer;
+}
+@media screen and (min-width: 800px) {
+    aside{
+        display: block;
+    }
+    body{
+        grid:
+        "header header header" 30px
+        "nav nav nav" 20px
+        "main main main" auto
+        "footer footer footer" 30px
+        /1fr 1fr 1fr
+        ;
+    }
+}
